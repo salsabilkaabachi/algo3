@@ -1,0 +1,82 @@
+
+ PROCEDURE dot_product( V1,v2:ARRAY_OF INTEGER[3], ps : INTEGER);
+    VAR
+    i : INTEGER;
+   ps : INTEGER ;
+   BEGIN
+  ps :=0;
+  FOR i FROM 0 TO 2 DO
+     ps:= ps+v1[i]*v2[i];
+
+  END_FOR
+    END
+    ALGORITHM dot_product
+
+VAR
+   v1 : ARRAY_OF type[3];
+   v2: ARRAY_OF type[3];
+  i : INTEGER;
+   ps : INTEGER ;
+ BEGIN
+ for i FROM 0 TO 2 DO
+  WRITE ("dooner l'elemenet" , i+1, "de la vecteur V1" )
+        WRITE ("dooner l'elemenet" , i+1, "de la vecteur V2" )
+    read (V1(i));
+    read (V2(i));
+    dot_product(V1, V2);
+    Write(ps);
+    END_FOR
+   dot_product(V1, V2, prodS)
+FOR i FROM 0 TO V1.length   DO 
+   FOR j FROM j=i + 1 TO V2.length DO
+      IF (V1[i] = V2[j] and prodS=0 ) THEN
+          Write('are orthogonal');
+    ELSE
+        Write('not orthogonal');
+      END_IF
+  END_FOR
+END_FOR
+
+END
+
+
+END
+
+FUNCTION dot_product(v1 : ARRAY_OF FLOAT[] ,v2 : ARRAY_OF FLOAT[] , ) : FLOAT
+VAR
+    i  : INTEGER;
+    ps : FLOAT;
+BEGIN
+    ps :=0;
+FOR i FROM 0 TO 2  DO
+    ps := ps + V1(i)*V2(i);
+    
+END_FOR 
+RETURN ps; 
+END
+ALGORITHM dot_product
+VAR
+    V1,V2 : ARRAY_OF FLOAT[3];
+    i,j : INTEGER;
+    prodS,ps : FLOAT;
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        WRITE ("dooner l'elemenet" , i+1, "de la vecteur V1" )
+        WRITE ("dooner l'elemenet" , i+1, "de la vecteur V2" )
+    read (V1(i));
+    read (V2(i));
+    dot_product(V1, V2);
+   
+    END_FOR
+   dot_product(V1, V2);
+FOR i FROM 0 TO V1.length   DO 
+   FOR j FROM j=i + 1 TO V2.length DO
+      IF (V1[i] = V2[j] and prodS=0 ) THEN
+          Write('are orthogonal');
+    ELSE
+        Write('not orthogonal');
+      END_IF
+  END_FOR
+END_FOR
+
+END
